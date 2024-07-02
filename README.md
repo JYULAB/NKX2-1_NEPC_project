@@ -15,11 +15,11 @@ Expected output of each script are the indicated figures from the paper.
 
 ### Multiome
 
-- [**01_d2_single.R**]((https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/01_d2_single.R),  [**02_d14_single.R**]((https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/02_d14_single.R),  [**03_d21_single.R**]((https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/03_d21_single.R): Individual timepoint processing and filtering
-- [**04_GEX_integration.R**]((https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/04_GEX_integration.R): Integration and analysis of scRNA-Seq, Fig 3C, D, E, F
-- [**05_ATAC_integration.R**]((https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/05_ATAC_integration.R): Integration and analysis of scATAC-Seq, Fig 3H, I, J
-- [**clinical_patients_intergration.R**]((https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/clinical_patients_intergration.R): Integration with clinical patients and pseudotime analysis, Fig 3D, E
-- [**RNA_velocity.py**]((https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/RNA_velocity.py), [**RNA_velocity_metadata.py**]((https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/RNA_velocity_metadata.py), Fig 3G
+- [**01_d0_single.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/01_d0_single.R),  [**02_d14_single.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/02_d14_single.R),  [**03_d21_single.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/03_d21_single.R): Individual timepoint processing and filtering
+- [**04_GEX_integration.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/04_GEX_integration.R): Integration and analysis of scRNA-Seq, Fig 3C, D, E, F
+- [**05_ATAC_integration.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/05_ATAC_integration.R): Integration and analysis of scATAC-Seq, Fig 3H, I, J
+- [**clinical_patients_intergration.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/clinical_patients_intergration.R): Integration with clinical patients and pseudotime analysis, Fig 3D, E
+- [**RNA_velocity.py**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/RNA_velocity.py), [**RNA_velocity_metadata.py**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome/RNA_velocity_metadata.py), Fig 3G
 
 
  
