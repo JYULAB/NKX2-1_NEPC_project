@@ -41,9 +41,9 @@ The scripts are organized by technology/analysis type. If any scripts are to be 
 - [**03_split_subclones_color.R**](Multiome_additional/03_split_subclones_color.R): Finding clones in the combined matrix and plotting heatmap, Fig S4D
 - [**04_epi_loose_atac.R**](Multiome_additional/04_epi_loose_atac.R): Plotting clones on UMAP and violin plots, Fig SE, F
 
-### Hi-C
-- [**Expected values.ipynb**](Hi-C/Expected values.ipynb):Calculating eigenvector values by 100kb bins 
-- [**AB Compartments.ipynb**](Hi-C/AB Compartments.ipynb): Calculating eigenvector values by 100kb bins
+### Hi-C  
+- [**Expected_values.ipynb**](Hi-C/Expected_values.ipynb):Calculating eigenvector values by 100kb bins 
+- [**AB_Compartments.ipynb**](Hi-C/AB_Compartments.ipynb): Calculating eigenvector values by 100kb bins
 - [**AB_compartment_correlation.R**](Hi-C/AB_compartment_correlation.R): Calculating correlations between top variable compartments, Fig S1A, 2C
 
 #### pdx_loops
@@ -72,8 +72,8 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**w4_fx_nx_no_w0_loops.bedpe**](Hi-C/lncap_loops/FOXA1-NKX2-1/w4_fx_nx_no_w0_loops.bedpe): loops used for Fig 4F
 
 ### ATAC-Seq
-- [**merge_summit_by_score.sh**](ATAC-seq/merge_summit_by_score.sh): creating consensus peaks
-- [**Differentially_accessible_regions.R**](ATAC-seq/Differentially accessible regions.R): Finding differentially accessible regions, Fig 3A, B
+- [**merge_summit_by_score.sh**](ATAC-seq/merge_summit_by_score.sh): creating consensus peaks  
+- [**Differentially_accessible_regions.R**](ATAC-seq/Differentially_accessibleregions.R): Finding differentially accessible regions, Fig 3A, B
 - [**ATAC-seq_PCA.R**](ATAC-seq/ATAC-seq_PCA.R): Including other ATAC-seq data, Fig S3C
 
 
