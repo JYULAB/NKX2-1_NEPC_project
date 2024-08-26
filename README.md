@@ -1,7 +1,7 @@
 # Code for NKX2-1 Paper
 Citation:
 
-This repositopry includes the main pieces of code used to support the conclusions in the paper. The following code were used in a SLURM High Performance Computing environment, using a combination of bash scripting, R (4.0.3) and python >=3.6. Detailed versions of softwares used are listed in Methods section of the paper.
+This repository includes the main pieces of code used to support the conclusions in the paper. The following code were used in a SLURM High Performance Computing environment, using a combination of bash scripting, R (4.0.3) and python >=3.6. Detailed versions of softwares used are listed in Methods section of the paper.
 
 The scripts are organized by technology/analysis type. If any scripts are to be run in order, prefix numbers are provided in the script name. Otherwise, each script is mostly standalone. Files needed to start analysis such as .mcool files and .hd5 files which have a large size were uploaded to GEO. Some files are provided here, such as the final cells passing filtering that were used in Multiome analysis. Expected output of each script are the indicated figures from the paper.
  
@@ -41,5 +41,37 @@ The scripts are organized by technology/analysis type. If any scripts are to be 
 - [**03_split_subclones_color.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome_additional/03_split_subclones_color.R): Finding clones in the combined matrix and plotting heatmap, Fig S4D
 - [**04_epi_loose_atac.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Multiome_additional/04_epi_loose_atac.R): Plotting clones on UMAP and violin plots, Fig SE, F
 
+### Hi-C
 
- 
+- [**Expected values.ipynb**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/Expected values.ipynb):Calculating eigenvector values by 100kb bins 
+- [**AB Compartments.ipynb**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/AB Compartments.ipynb): Calculating eigenvector values by 100kb bins
+- [**AB_compartment_correlation.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/AB_compartment_correlation.R): Calculating correlations between top variable compartments, Fig S1A, 2C
+
+#### pdx_loops
+Specific loops in PDXs: Fig 1A, 1B
+-[**script_mustache_93.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/script_mustache_93.sh): Example script to call pairwise diffMustache
+- [**script_homer_93.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/script_homer_93.sh): Example script of finding sample specific loops
+- [**permutation.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/permutation.R): Permutation test for significance of CRE overlaping with specific loops, Fig 1I,J
+
+##### nepc/crpc
+- [**NEPC_loop.bedpe**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/nepc/NEPC_loop.bedpe): Specific loops file Fig 1A, 1B
+- [**specific_loop.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/nepc/): Finding specific loops and finding genes linked to specific loop anchors and performing GO, Fig 1C, D, E, F
+- [**script_apa**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/nepc/): Plotting APA plots Fig 1A, 1B
+- [**script_homer_nepc.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/nepc/script_homer_nepc.sh): Script for finding NEPC specific loops: loops present in 2 or more samples
+- [**specific_loop_cre_overlap.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/nepc/): Finding specific loops with cre overlap, Fig 1I,J
+- [**script_motif.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/nepc/script_motif.sh): Finding motifs of CREs located at specific loop anchor. For Fig 1I, J
+
+#### lncap_loops
+-[**script_mustache.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/script_mustache.sh): Script to call pairwise diffMustache between D0 and D28, Fig 2D
+-[**w0_vs_w4.diffloop1.bedpe**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/w0_vs_w4.diffloop1.bedpe): Luminal and NE loops, Fig 2D 
+-[**script_apa.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/script_apa.sh): Plotting APA plots Fig 2D
+-[**Luminal_NE_loops.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/Luminal_NE_loops.R): Genes linked to Luminal and NE loops, S2H
+
+##### FOXA1-NKX2-1
+-[**fx_nk_liked_loops.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/fx_nk_liked_loops.R): Finding loops with either FOXA2 or NKX2-1 at loop anchors.
+-[**compare.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/compare.sh): selecting only loops present in d28 and not d0.
+-[**w4_fx_nx_no_w0_loops.bedpe**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/w4_fx_nx_no_w0_loops.bedpe): loops used for Fig 4F
+
+
+
+
