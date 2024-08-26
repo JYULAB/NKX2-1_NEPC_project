@@ -62,15 +62,20 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**script_motif.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/pdx_loops/pdx_specific_loops/nepc/script_motif.sh): Finding motifs of CREs located at specific loop anchor. For Fig 1I, J
 
 #### lncap_loops
--[**script_mustache.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/script_mustache.sh): Script to call pairwise diffMustache between D0 and D28, Fig 2D
--[**w0_vs_w4.diffloop1.bedpe**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/w0_vs_w4.diffloop1.bedpe): Luminal and NE loops, Fig 2D 
--[**script_apa.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/script_apa.sh): Plotting APA plots Fig 2D
--[**Luminal_NE_loops.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/Luminal_NE_loops.R): Genes linked to Luminal and NE loops, S2H
+- [**script_mustache.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/script_mustache.sh): Script to call pairwise diffMustache between D0 and D28, Fig 2D
+- [**w0_vs_w4.diffloop1.bedpe**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/w0_vs_w4.diffloop1.bedpe): Luminal and NE loops, Fig 2D 
+- [**script_apa.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/script_apa.sh): Plotting APA plots Fig 2D
+- [**Luminal_NE_loops.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/Luminal_NE_loops.R): Genes linked to Luminal and NE loops, S2H
 
 ##### FOXA1-NKX2-1
--[**fx_nk_liked_loops.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/fx_nk_liked_loops.R): Finding loops with either FOXA2 or NKX2-1 at loop anchors.
--[**compare.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/compare.sh): selecting only loops present in d28 and not d0.
--[**w4_fx_nx_no_w0_loops.bedpe**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/w4_fx_nx_no_w0_loops.bedpe): loops used for Fig 4F
+- [**fx_nk_liked_loops.R**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/fx_nk_liked_loops.R): Finding loops with either FOXA2 or NKX2-1 at loop anchors.
+- [**compare.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/compare.sh): selecting only loops present in d28 and not d0.
+- [**w4_fx_nx_no_w0_loops.bedpe**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/Hi-C/lncap_loops/FOXA1-NKX2-1/w4_fx_nx_no_w0_loops.bedpe): loops used for Fig 4F
+
+### ATAC-Seq
+- [**merge_summit_by_score.sh**](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/ATAC-seq/merge_summit_by_score.sh): creating consensus peaks
+- [*Differentially_accessible_regions.R*](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/ATAC-seq/Differentially accessible regions.R): Finding differentially accessible regions, Fig 3A, B
+- [*ATAC-seq_PCA*](https://github.com/JYULAB/NKX2-1_NEPC_project/blob/main/ATAC-seq/): Including other ATAC-seq data, Fig S3C
 
 
 
