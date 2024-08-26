@@ -68,14 +68,14 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**Luminal_NE_loops.R**](Hi-C/lncap_loops/Luminal_NE_loops.R): Genes linked to Luminal and NE loops, S2H
 
 ##### FOXA1-NKX2-1
-- [**fx_nk_liked_loops.R**](Hi-C/lncap_loops/FOXA1-NKX2-1/fx_nk_liked_loops.R): Finding loops with either FOXA2 or NKX2-1 at loop anchors.
-- [**compare.sh**](Hi-C/lncap_loops/FOXA1-NKX2-1/compare.sh): selecting only loops present in d28 and not d0.
+- [**fx_nk_liked_loops.R**](Hi-C/lncap_loops/FOXA1-NKX2-1/fx_nk_liked_loops.R): Finding loops with either FOXA2 or NKX2-1 at loop anchors
+- [**compare.sh**](Hi-C/lncap_loops/FOXA1-NKX2-1/compare.sh): selecting only loops present in d28 and not d0
 - [**w4_fx_nx_no_w0_loops.bedpe**](Hi-C/lncap_loops/FOXA1-NKX2-1/w4_fx_nx_no_w0_loops.bedpe): loops used for Fig 4F
 
 ### ATAC-Seq
 - [**merge_summit_by_score.sh**](ATAC-seq/merge_summit_by_score.sh): creating consensus peaks
-- [*Differentially_accessible_regions.R*](ATAC-seq/Differentially accessible regions.R): Finding differentially accessible regions, Fig 3A, B
-- [*ATAC-seq_PCA*](ATAC-seq/): Including other ATAC-seq data, Fig S3C
+- [**Differentially_accessible_regions.R**](ATAC-seq/Differentially accessible regions.R): Finding differentially accessible regions, Fig 3A, B
+- [**ATAC-seq_PCA.R**](ATAC-seq/ATAC-seq_PCA.R): Including other ATAC-seq data, Fig S3C
 
 
 
