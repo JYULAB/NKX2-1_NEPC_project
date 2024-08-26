@@ -42,14 +42,13 @@ The scripts are organized by technology/analysis type. If any scripts are to be 
 - [**04_epi_loose_atac.R**](Multiome_additional/04_epi_loose_atac.R): Plotting clones on UMAP and violin plots, Fig SE, F
 
 ### Hi-C
-
 - [**Expected values.ipynb**](Hi-C/Expected values.ipynb):Calculating eigenvector values by 100kb bins 
 - [**AB Compartments.ipynb**](Hi-C/AB Compartments.ipynb): Calculating eigenvector values by 100kb bins
 - [**AB_compartment_correlation.R**](Hi-C/AB_compartment_correlation.R): Calculating correlations between top variable compartments, Fig S1A, 2C
 
 #### pdx_loops
-Specific loops in PDXs: Fig 1A, 1B
--[**script_mustache_93.sh**](Hi-C/pdx_loops/script_mustache_93.sh): Example script to call pairwise diffMustache
+Specific loops in PDXs: Fig 1A, 1B  
+- [**script_mustache_93.sh**](Hi-C/pdx_loops/script_mustache_93.sh): Example script to call pairwise diffMustache
 - [**script_homer_93.sh**](Hi-C/pdx_loops/pdx_specific_loops/script_homer_93.sh): Example script of finding sample specific loops
 - [**permutation.R**](Hi-C/pdx_loops/pdx_specific_loops/permutation.R): Permutation test for significance of CRE overlaping with specific loops, Fig 1I,J
 
