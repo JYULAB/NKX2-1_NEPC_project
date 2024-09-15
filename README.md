@@ -81,5 +81,5 @@ Specific loops in PDXs: Fig 1A, 1B
 
 ### miscellaneous_code
 - [**gene_correlation_for_all_tables_4ppt_ggplot.R**](miscellaneous_code/gene_correlation_for_all_tables_4ppt_ggplot.R): R code to draw scatter plots with prostate cancer patient data, Fig S6A, S7B  
-- [**Differentially_accessible_regions.R**](ATAC-seq/Differentially_accessible_regions.R): Finding differentially accessible regions, Fig 3A, B
+- [**command.sh**](miscellaneous_code/command.sh): generating super enhancer plot, Fig S9C, S9E
 - [**ATAC-seq_PCA.R**](ATAC-seq/ATAC-seq_PCA.R): Including other ATAC-seq data, Fig S3C
