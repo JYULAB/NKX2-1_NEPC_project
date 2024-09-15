@@ -83,3 +83,8 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**gene_correlation_for_all_tables_4ppt_ggplot.R**](miscellaneous_code/gene_correlation_for_all_tables_4ppt_ggplot.R): R code to draw scatter plots with prostate cancer patient data, Fig S6A, S7B  
 - [**command.sh**](miscellaneous_code/command.sh): generating super enhancer plots, Fig S9C, S9E
 - [**TF_volcano.R**](miscellaneous_code/TF_volcano.R): creating TF volcano plots, Fig 5A
+
+### Nanopore_long_read
+- [**DNA_methylation_boxplot.R**](Nanopore_long_read/DNA_methylation_boxplot.R): R code to draw patient DNA methylation level box plots  Fig S6C  
+- [**command.sh**](miscellaneous_code/command.sh): generating super enhancer plots, Fig S9C, S9E
+- [**TF_volcano.R**](miscellaneous_code/TF_volcano.R): creating TF volcano plots, Fig 5A
