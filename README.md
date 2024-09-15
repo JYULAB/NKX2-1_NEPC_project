@@ -73,7 +73,7 @@ Specific loops in PDXs: Fig 1A, 1B
 
 ### ATAC-Seq
 - [**merge_summit_by_score.sh**](ATAC-seq/merge_summit_by_score.sh): creating consensus peaks  
-- [**Differentially_accessible_regions.R**](ATAC-seq/Differentially_accessibleregions.R): Finding differentially accessible regions, Fig 3A, B
+- [**Differentially_accessible_regions.R**](ATAC-seq/Differentially_accessible_regions.R): Finding differentially accessible regions, Fig 3A, B
 - [**ATAC-seq_PCA.R**](ATAC-seq/ATAC-seq_PCA.R): Including other ATAC-seq data, Fig S3C
 
 
