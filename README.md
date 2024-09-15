@@ -87,4 +87,4 @@ Specific loops in PDXs: Fig 1A, 1B
 ### Nanopore_long_read
 - [**DNA_methylation_boxplot.R**](Nanopore_long_read/DNA_methylation_boxplot.R): R code to draw patient DNA methylation level box plots  Fig S6C  
 - [**command.sh**](miscellaneous_code/command.sh): generating super enhancer plots, Fig S9C, S9E
-- [**mA_mCpG_corr_plot.R**](Nanopore_long_reaD/mA_mCpG_corr_plot.R): creating mA and mCpG correlation plots, Fig 6C, 6G
+- [**mA_mCpG_corr_plot.R**](Nanopore_long_read/mA_mCpG_corr_plot.R): creating mA and mCpG correlation plots, Fig 6C, 6G
