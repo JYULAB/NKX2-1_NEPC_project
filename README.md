@@ -71,11 +71,12 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**compare.sh**](Hi-C/lncap_loops/FOXA1-NKX2-1/compare.sh): selecting only loops present in d28 and not d0
 - [**w4_fx_nx_no_w0_loops.bedpe**](Hi-C/lncap_loops/FOXA1-NKX2-1/w4_fx_nx_no_w0_loops.bedpe): loops used for Fig 4F
 
-### ATAC-Seq
+### ATAC-seq
 - [**merge_summit_by_score.sh**](ATAC-seq/merge_summit_by_score.sh): creating consensus peaks  
 - [**Differentially_accessible_regions.R**](ATAC-seq/Differentially_accessible_regions.R): Finding differentially accessible regions, Fig 3A, B
 - [**ATAC-seq_PCA.R**](ATAC-seq/ATAC-seq_PCA.R): Including other ATAC-seq data, Fig S3C
 
-
+### ChIP-seq
+- [**command.sh**](ATAC-seq/merge_summit_by_score.sh): creating heatmaps, Fig 4D, 4E, 4H, 5E, 7D, S5E, S7E, S9A, S9B (same code for ATAC-seq heatmaps).
 
 
