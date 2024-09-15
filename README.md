@@ -89,4 +89,4 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**command.sh**](Nanopore_long_read/command.sh): generating mA and mCpG heatmaps and profiles, Fig 6B, S8A
 - [**mA_mCpG_corr_plot.R**](Nanopore_long_read/mA_mCpG_corr_plot.R): creating mA and mCpG correlation plots, Fig 6C, 6G
 - [**methylation_PCA.R**](Nanopore_long_read/methylation_PCA.R): creating methylation profile PCA plots, Fig 6D, S8E
-- [**PDX_methylation_command.sh**](Nanopore_long_read/PDX_methylation_command.sh): generating mA and mCpG of PDX profiles, Fig 6F, S8B
+- [**PDX_methylation_command.sh**](Nanopore_long_read/PDX_methylation_command.sh): generating mA and mCpG of PDX profiles, Fig 6F, S8B, S8C
