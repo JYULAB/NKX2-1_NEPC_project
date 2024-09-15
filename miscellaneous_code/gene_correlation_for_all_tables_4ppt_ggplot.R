@@ -1,9 +1,8 @@
 ## each time, just change the name of gene which needs to be checked
 ## note: need to use R 64 bits, not R 32 bits program
 
-setwd("D:\\galina\\2019_03_18\\corr")
-geneA = 'NCAPH'
-geneB = 'ACKR3'
+geneA = 'gene1'
+geneB = 'gene2'
 
 gene_exp_table = ''
 
