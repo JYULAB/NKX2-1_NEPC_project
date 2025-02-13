@@ -23,8 +23,8 @@ The scripts are organized by technology/analysis type. If any scripts are to be 
 
 ### Multiome Additional Sequencing
 
-- [**d21_add.R**](Multiome_additional/): D21 additional sequencing processing
-- [**d21_add_ectopic.R**](Multiome_additional/): D21 additional sequencing with inclusion of ectopic sequence processing and imputation
+- [**d21_add.R**](Multiome_additional/d21_add.R): D21 additional sequencing processing
+- [**d21_add_ectopic.R**](Multiome_additional/d21_add_ectopic.R): D21 additional sequencing with inclusion of ectopic sequence processing and imputation
 - [**endogenous_integration_rna.R**](Multiome_additional/endogenous_integration_rna.R): Integation of RNA of original D0 and D14 with D21 additional sequencing, Fig S4B, C
 - [**endogenous_integration_atac.R**](Multiome_additional/endogenous_integration_atac.R): Integration of original D0 and D14 with D21 additional sequencing, Fig S4E, F
 - [**meta_highlight_manual.R**](Multiome_additional/meta_highlight_manual.R), [**Meta_Highlight_Plot_manual.R**](Multiome_additional/Meta_Highlight_Plot_manual.R): manually tweaking plotting functions to ensure rare clones are shown on top in the UMAP, Fig S4B, E
@@ -34,12 +34,9 @@ The scripts are organized by technology/analysis type. If any scripts are to be 
 - [**02_copykat_analysis.R**](Multiome_additional/02_copykat_analysis.R): Filtering cells and combining individual CNA 
 - [**03_draw_heatmap.R**](Multiome_additional/03_draw_heatmap.R): Draw CNA heatmap, Fig S4A
 - [**Multiome_additional_cells.csv**](Multiome_additional/Multiome_additional_cells.csv): cell barcodes that passed filtering
-
-#### epiAneufinder
-- [**01_epiAneufinder_fragment_run.R**](Multiome_additional/01_epiAneufinder_fragment_run.R): Running epiAneufinder on individual samples
-- [**02_endogenous_epi_bins_loose.R**](Multiome_additional/02_endogenous_epi_bins_loose.R): Filtering cells and combining individual CNA 
-- [**03_split_subclones_color.R**](Multiome_additional/03_split_subclones_color.R): Finding clones in the combined matrix and plotting heatmap, Fig S4D
-- [**04_epi_loose_atac.R**](Multiome_additional/04_epi_loose_atac.R): Plotting clones on UMAP and violin plots, Fig SE, F
+  
+#### scNanoRNA-seq
+- [**d0-d28_scnanornaseq.R**](scNanoRNA-seq/d0-d28_scnanornaseq.R): Script for scNanoRNA-seq analysis, Fig S4D-H
 
 ### Hi-C  
 - [**Expected_values.ipynb**](Hi-C/Expected_values.ipynb):Calculating eigenvector values by 100kb bins 
