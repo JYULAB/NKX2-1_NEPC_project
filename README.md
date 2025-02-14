@@ -25,15 +25,14 @@ The scripts are organized by technology/analysis type. If any scripts are to be 
 
 - [**d21_add.R**](Multiome_additional/d21_add.R): D21 additional sequencing processing
 - [**d21_add_ectopic.R**](Multiome_additional/d21_add_ectopic.R): D21 additional sequencing with inclusion of ectopic sequence processing and imputation
-- [**endogenous_integration_rna.R**](Multiome_additional/endogenous_integration_rna.R): Integation of RNA of original D0 and D14 with D21 additional sequencing, Fig S4B, C
-- [**endogenous_integration_atac.R**](Multiome_additional/endogenous_integration_atac.R): Integration of original D0 and D14 with D21 additional sequencing, Fig S4E, F
 - [**meta_highlight_manual.R**](Multiome_additional/meta_highlight_manual.R), [**Meta_Highlight_Plot_manual.R**](Multiome_additional/Meta_Highlight_Plot_manual.R): manually tweaking plotting functions to ensure rare clones are shown on top in the UMAP, Fig S4B, E
 
 #### copyKat
-- [**01_copykat_run.R**](Multiome_additional/01_copykat_run.R): Running copyKat on individual samples
-- [**02_copykat_analysis.R**](Multiome_additional/02_copykat_analysis.R): Filtering cells and combining individual CNA 
-- [**03_draw_heatmap.R**](Multiome_additional/03_draw_heatmap.R): Draw CNA heatmap, Fig S4A
-- [**Multiome_additional_cells.csv**](Multiome_additional/Multiome_additional_cells.csv): cell barcodes that passed filtering
+- [**01_copykat_run.R**](Multiome_additional/copykat/01_copykat_run.R): Running copyKat on individual samples
+- [**02_copykat_analysis.R**](Multiome_additional/copykat/02_copykat_analysis.R): Filtering cells and combining individual CNA 
+- [**03_draw_heatmap.R**](Multiome_additional/copykat/03_draw_heatmap.R): Draw CNA heatmap, Fig S4A
+- [**04_rna_integration_cna_filtered.R**](Multiome_additional/copykat/04_rna_integration_cna_filtered.R): Integration of individual timepoints and plotting, Fig S4B, S4C
+- [**Multiome_additional_cells.csv**](Multiome_additional/copykat/copy_cells.csv): cell barcodes that passed filtering
   
 #### scNanoRNA-seq
 - [**d0-d28_scnanornaseq.R**](scNanoRNA-seq/d0-d28_scnanornaseq.R): Script for scNanoRNA-seq analysis, Fig S4D-H
