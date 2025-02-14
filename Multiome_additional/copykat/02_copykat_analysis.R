@@ -1,80 +1,56 @@
 library(tidyverse)
-library(Seurat)
-library(scCustomize)
 
-polychrome_pal <- DiscretePalette_scCustomize(num_colors = 36, palette = "polychrome")
-polychrome_pal <- polychrome_pal[c(1, 3, 6:36)]
+source("../../../../multiome2/atac_integration/epi_loose/meta_highlight_manual.R")
+source("../../../../multiome2/atac_integration/epi_loose/Meta_Highlight_Plot_manual.R")
 
-integrated <- readRDS("../../rna_integration/rna_integrated.RDS")
-
-d2_copykat <- read_delim("d2/D2_copykat_prediction.txt")
-d14_copykat <- read_delim("d14/D14_copykat_prediction.txt")
-d21_add_copykat <- read_delim("d21_add/D21_add_copykat_prediction.txt")
-
-d2_seu <- readRDS("../../../multiome/single_d2/simple_d2.RDS")
-d14_seu <- readRDS("../../../multiome/single/simple_d14.RDS")
-d21_add_seu <- readRDS("../../d21/simple_d21.RDS")
-
-# filtering copykat results to only cells we kept
-d2_cells_status <- d2_copykat[which(d2_copykat$cell.names %in% Cells(d2_seu)),]
-d2_status <- d2_cells_status$copykat.pred
-names(d2_status) <- d2_cells_status$cell.names
-d2_seu$copykat <- d2_cells_status$copykat.pred
-
-DimPlot_scCustom(d2_seu, group.by = "copykat", pt.size = 1)
-
-d14_cells_status <- d14_copykat[which(d14_copykat$cell.names %in% Cells(d14_seu)),]
-d14_seu$copykat <- d14_cells_status$copykat.pred
-DimPlot_scCustom(d14_seu, group.by = "copykat", pt.size = 1)
-
-d21_cells_status <- d21_add_copykat[which(d21_add_copykat$cell.names %in% Cells(d21_add_seu)),]
-d21_add_seu$copykat <- d21_cells_status$copykat.pred
-DimPlot_scCustom(d21_add_seu, group.by = "copykat", pt.size = 1, colors_use = c(NavyAndOrange(), polychrome_pal[1]))
-
-all_cells_barcodes <- c(paste0("d2-", d2_cells_status$cell.names), paste0("d14-", d14_cells_status$cell.names),
-                      paste0("d21-", d21_cells_status$cell.names))
-all_cells_status <- c(d2_cells_status$copykat.pred, d14_cells_status$copykat.pred, d21_cells_status$copykat.pred)
-names(all_cells_status) <- all_cells_barcodes
-integrated$copykat <- all_cells_status
-DimPlot_scCustom(integrated, group.by = "copykat", colors_use = c(NavyAndOrange(), polychrome_pal[1]), pt.size = 1)
-
-# copykat cna results
 d2_cna <- read_delim("d2/D2_copykat_CNA_results.txt")
-colnames(d2_cna) <- colnames(d2_cna) %>% str_replace("\\.", "-")
-d2_cna <- d2_cna[, c(1:3, which(colnames(d2_cna) %in% d2_cells_status$cell.names))]
-colnames(d2_cna)[4:ncol(d2_cna)] <- paste0("d2-", colnames(d2_cna)[4:ncol(d2_cna)])
+colnames(d2_cna) <- c(colnames(d2_cna)[1:3], paste0("d2-", colnames(d2_cna)[4:ncol(d2_cna)], "-1"))
 
 d14_cna <- read_delim("d14/D14_copykat_CNA_results.txt")
-colnames(d14_cna) <- colnames(d14_cna) %>% str_replace("\\.", "-")
-d14_cna <- d14_cna[, c(1:3, which(colnames(d14_cna) %in% d14_cells_status$cell.names))]
-colnames(d14_cna)[4:ncol(d14_cna)] <- paste0("d14-", colnames(d14_cna)[4:ncol(d14_cna)])
+colnames(d14_cna) <- c(colnames(d14_cna)[1:3], paste0("d14-", colnames(d14_cna)[4:ncol(d14_cna)], "-1"))
 
-d21_cna <- read_delim("d21_add/D21_add_copykat_CNA_results.txt")
-colnames(d21_cna) <- colnames(d21_cna) %>% str_replace("\\.", "-")
-d21_cna <- d21_cna[, c(1:3, which(colnames(d21_cna) %in% d21_cells_status$cell.names))]
-colnames(d21_cna)[4:ncol(d21_cna)] <- paste0("d21-", colnames(d21_cna)[4:ncol(d21_cna)])
+d21_cna <- read_delim("d21/D21_add_copykat_CNA_results.txt")
+colnames(d21_cna) <- c(colnames(d21_cna)[1:3], paste0("d21-", colnames(d21_cna)[4:ncol(d21_cna)], "-1"))
 
-c(colnames(d2_cna)[4:ncol(d2_cna)], colnames(d14_cna)[4:ncol(d14_cna)],colnames(d21_add_cna)[4:ncol(d21_add_cna)]) %>% length()
+d2_cna_mat <- d2_cna[4:ncol(d2_cna)]
+d14_cna_mat <- d14_cna[4:ncol(d14_cna)]
+d21_cna_mat <- d21_cna[4:ncol(d21_cna)]
 
-# combining cna matrix
-combined_cna_temp <- inner_join(d2_cna, d14_cna, by = c("chrom", "chrompos", "abspos"))
-colnames(combined_cna_temp)[str_detect(colnames(combined_cna_temp), pattern = "[xy]+")]
+# filtering on heatmaps ----
 
-combined_cna <- inner_join(combined_cna_temp, d21_cna, by = c("chrom", "chrompos", "abspos"))
-colnames(combined_cna)[str_detect(colnames(combined_cna), pattern = "[xy]+")]
+# Define the filtering threshold and range
+threshold <- 0.8  # 80%
+lower_bound <- -0.1
+upper_bound <- 0.1
 
-write_delim(combined_cna, "combined_cna.txt")
-combined_cna_barcode_only <- str_extract(colnames(combined_cna)[4:ncol(combined_cna)], "(?<=-)[:graph:]+")
+# Calculate the proportion of values within the range for each row
+d21_proportion_in_range <- apply(d21_cna_mat, 2, function(row) {
+  mean(row >= lower_bound & row <= upper_bound)
+})
 
-combined_pred <-rbind(d2_cells_status, d14_cells_status, d21_cells_status)
-combined_pred_status <- combined_pred[combined_pred$cell.names %in% combined_cna_barcode_only, 2]
-write_delim(combined_pred_status, "combined_pred.txt")
+cna_based_filtered_d21 <- d21_cna_mat[, d21_proportion_in_range < threshold]
+cna_based_filtered_d21_fin <- cbind(d21_cna[,1:3], cna_based_filtered_d21)
 
-# clones ------
-tree_2 <- readRDS("heatmap/tree2.RDS")
-names(tree_2) <- names(tree_2) %>% str_replace("-", "_")
-names(tree_2) %in% Cells(integrated) %>% table()
-integrated$tree_2 <- tree_2
-DimPlot_scCustom(integrated, group.by = "tree_2", colors_use = color_clones, pt.size = 1)
+saveRDS(cna_based_filtered_d21_fin, "filtered_matrix_fin.RDS")
 
+d2_proportion_in_range <- apply(d2_cna_mat, 2, function(row) {
+  mean(row >= lower_bound & row <= upper_bound)
+})
+
+cna_based_filtered_d2 <- d2_cna_mat[, d2_proportion_in_range < threshold]
+cna_based_filtered_d2_fin <- cbind(d2_cna[,1:3], cna_based_filtered_d2)
+saveRDS(cna_based_filtered_d2_fin, "cna_based_filtered_d2_fin.RDS")
+
+d14_proportion_in_range <- apply(d14_cna_mat, 2, function(row) {
+  mean(row >= lower_bound & row <= upper_bound)
+})
+
+cna_based_filtered_d14 <- d14_cna_mat[, d14_proportion_in_range < threshold]
+cna_based_filtered_d14_fin <- cbind(d14_cna[,1:3], cna_based_filtered_d14)
+saveRDS(cna_based_filtered_d14_fin, "cna_based_filtered_d14_fin.RDS")
+
+
+combined_cna_temp_1_heatmap <- inner_join(cna_based_filtered_d2_fin, cna_based_filtered_d14_fin, by = c("chrom", "chrompos", "abspos"))
+combined_cna_1_heatmap <- inner_join(combined_cna_temp_1_heatmap, cna_based_filtered_d21_fin, by = c("chrom", "chrompos", "abspos"))
+write_delim(combined_cna_1_heatmap, "combined_cna_1_heatmap.txt")
 
