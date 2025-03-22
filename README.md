@@ -73,17 +73,17 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**ATAC-seq_PCA.R**](ATAC-seq/ATAC-seq_PCA.R): Including other ATAC-seq data, Fig S3C
 
 ### ChIP-seq
-- [**command.sh**](ChIP-seq/command.sh): creating heatmaps, Fig 4D, 4E, 4H, 5E, 7D, ED5E, ED7E, ED9A, ED9B (same tool is used for ATAC-seq heatmaps).
+- [**command.sh**](ChIP-seq/command.sh): creating heatmaps, Fig.4d, 4e, 4h, 5e, 7d, Extended Data Fig.5e, 7e, 9a, 9b (same tool is used for ATAC-seq heatmaps).
 
 ### miscellaneous_code
-- [**gene_correlation_for_all_tables_4ppt_ggplot.R**](miscellaneous_code/gene_correlation_for_all_tables_4ppt_ggplot.R): R code to draw scatter plots with prostate cancer patient data, Fig ED6A, ED7B  
-- [**command.sh**](miscellaneous_code/command.sh): generating super enhancer plots, Fig ED9C, ED9E
-- [**TF_volcano.R**](miscellaneous_code/TF_volcano.R): creating TF volcano plots, Fig 5A
+- [**gene_correlation_for_all_tables_4ppt_ggplot.R**](miscellaneous_code/gene_correlation_for_all_tables_4ppt_ggplot.R): R code to draw scatter plots with prostate cancer patient data, Extended Data Fig.6a, 7b
+- [**command.sh**](miscellaneous_code/command.sh): generating super enhancer plots, Extended Data Fig.9c, 9e
+- [**TF_volcano.R**](miscellaneous_code/TF_volcano.R): creating TF volcano plots, Fig.5a
 
 ### Nanopore_long_read
-- [**DNA_methylation_boxplot.R**](Nanopore_long_read/DNA_methylation_boxplot.R): R code to draw patient DNA methylation level box plots  Fig ED6C
-- [**IGV_track_command.sh**](Nanopore_long_read/IGV_track_command.sh): generating IGV bigwig track files, Fig 6A, 6E, ED6B
-- [**command.sh**](Nanopore_long_read/command.sh): generating mA and mCpG heatmaps and profiles, Fig 6B, ED8A
-- [**mA_mCpG_corr_plot.R**](Nanopore_long_read/mA_mCpG_corr_plot.R): creating mA and mCpG correlation plots, Fig 6C, 6G
-- [**methylation_PCA.R**](Nanopore_long_read/methylation_PCA.R): creating methylation profile PCA plots, Fig 6D, ED8C
-- [**PDX_methylation_command.sh**](Nanopore_long_read/PDX_methylation_command.sh): generating mA and mCpG of PDX profiles, Fig 6F, ED8D, ED8E
+- [**DNA_methylation_boxplot.R**](Nanopore_long_read/DNA_methylation_boxplot.R): R code to draw patient DNA methylation level box plots, Extended Data Fig. 6c
+- [**IGV_track_command.sh**](Nanopore_long_read/IGV_track_command.sh): generating IGV bigwig track files, Fig.6a, 6e, Extended Data Fig.6b
+- [**command.sh**](Nanopore_long_read/command.sh): generating mA and mCpG heatmaps and profiles, Fig.6b, Extended Data Fig.8a
+- [**mA_mCpG_corr_plot.R**](Nanopore_long_read/mA_mCpG_corr_plot.R): creating mA and mCpG correlation plots, Fig.6c, 6g
+- [**methylation_PCA.R**](Nanopore_long_read/methylation_PCA.R): creating methylation profile PCA plots, Fig.6d, Extended Data Fig.8c
+- [**PDX_methylation_command.sh**](Nanopore_long_read/PDX_methylation_command.sh): generating mA and mCpG of PDX profiles, Fig.6f, Extended Data Fig.8d, 8e
