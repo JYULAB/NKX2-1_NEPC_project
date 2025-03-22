@@ -81,7 +81,7 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**TF_volcano.R**](miscellaneous_code/TF_volcano.R): creating TF volcano plots, Fig.5a
 
 ### Nanopore_long_read
-- [**DNA_methylation_boxplot.R**](Nanopore_long_read/DNA_methylation_boxplot.R): R code to draw patient DNA methylation level box plots, Extended Data Fig. 6c
+- [**DNA_methylation_boxplot.R**](Nanopore_long_read/DNA_methylation_boxplot.R): R code to draw patient DNA methylation level box plots, Extended Data Fig.6c
 - [**IGV_track_command.sh**](Nanopore_long_read/IGV_track_command.sh): generating IGV bigwig track files, Fig.6a, 6e, Extended Data Fig.6b
 - [**command.sh**](Nanopore_long_read/command.sh): generating mA and mCpG heatmaps and profiles, Fig.6b, Extended Data Fig.8a
 - [**mA_mCpG_corr_plot.R**](Nanopore_long_read/mA_mCpG_corr_plot.R): creating mA and mCpG correlation plots, Fig.6c, 6g
