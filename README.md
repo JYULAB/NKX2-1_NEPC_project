@@ -76,14 +76,14 @@ Specific loops in PDXs: Fig 1A, 1B
 - [**command.sh**](ChIP-seq/command.sh): creating heatmaps, Fig 4D, 4E, 4H, 5E, 7D, ED5E, ED7E, ED9A, ED9B (same tool is used for ATAC-seq heatmaps).
 
 ### miscellaneous_code
-- [**gene_correlation_for_all_tables_4ppt_ggplot.R**](miscellaneous_code/gene_correlation_for_all_tables_4ppt_ggplot.R): R code to draw scatter plots with prostate cancer patient data, Fig S6A, S7B  
-- [**command.sh**](miscellaneous_code/command.sh): generating super enhancer plots, Fig S9C, S9E
+- [**gene_correlation_for_all_tables_4ppt_ggplot.R**](miscellaneous_code/gene_correlation_for_all_tables_4ppt_ggplot.R): R code to draw scatter plots with prostate cancer patient data, Fig ED6A, ED7B  
+- [**command.sh**](miscellaneous_code/command.sh): generating super enhancer plots, Fig ED9C, ED9E
 - [**TF_volcano.R**](miscellaneous_code/TF_volcano.R): creating TF volcano plots, Fig 5A
 
 ### Nanopore_long_read
-- [**DNA_methylation_boxplot.R**](Nanopore_long_read/DNA_methylation_boxplot.R): R code to draw patient DNA methylation level box plots  Fig S6C
-- [**IGV_track_command.sh**](Nanopore_long_read/IGV_track_command.sh): generating IGV bigwig track files, Fig 6A, 6E, S6B
-- [**command.sh**](Nanopore_long_read/command.sh): generating mA and mCpG heatmaps and profiles, Fig 6B, S8A
+- [**DNA_methylation_boxplot.R**](Nanopore_long_read/DNA_methylation_boxplot.R): R code to draw patient DNA methylation level box plots  Fig ED6C
+- [**IGV_track_command.sh**](Nanopore_long_read/IGV_track_command.sh): generating IGV bigwig track files, Fig 6A, 6E, ED6B
+- [**command.sh**](Nanopore_long_read/command.sh): generating mA and mCpG heatmaps and profiles, Fig 6B, ED8A
 - [**mA_mCpG_corr_plot.R**](Nanopore_long_read/mA_mCpG_corr_plot.R): creating mA and mCpG correlation plots, Fig 6C, 6G
-- [**methylation_PCA.R**](Nanopore_long_read/methylation_PCA.R): creating methylation profile PCA plots, Fig 6D, S8E
-- [**PDX_methylation_command.sh**](Nanopore_long_read/PDX_methylation_command.sh): generating mA and mCpG of PDX profiles, Fig 6F, S8B, S8C
+- [**methylation_PCA.R**](Nanopore_long_read/methylation_PCA.R): creating methylation profile PCA plots, Fig 6D, ED8C
+- [**PDX_methylation_command.sh**](Nanopore_long_read/PDX_methylation_command.sh): generating mA and mCpG of PDX profiles, Fig 6F, ED8D, ED8E
